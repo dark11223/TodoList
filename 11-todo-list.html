@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles/todo-list.css">
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="header">
+        <h1>Todo List</h1>
+        <button class="dark-mode-toggle js-dark-mode-toggle">🌙</button>
+      </div>
+      
+      <!-- Statistics -->
+      <div class="stats"></div>
+      
+      <!-- Search and Filters -->
+      <div class="search-filters">
+        <input type="text" placeholder="Search todos..." class="js-search-input search-input">
+        <div class="filter-buttons">
+          <button class="filter-button js-filter-button active" data-filter="all">All</button>
+          <button class="filter-button js-filter-button" data-filter="pending">Pending</button>
+          <button class="filter-button js-filter-button" data-filter="completed">Completed</button>
+          <button class="filter-button js-filter-button" data-filter="overdue">Overdue</button>
+          <button class="filter-button js-filter-button" data-filter="high">High Priority</button>
+        </div>
+      </div>
+      
+      <!-- Input Row -->
+      <div class="todo-input-row">
+        <input placeholder="Todo name" class="js-input name-input">
+        <input type="date" class="js-due-date-input due-date-input">
+        <select class="js-priority-select priority-select">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button class="js-button add-button">Add</button>
+      </div>
+      
+      <!-- Todo List Container -->
+      <div class="js-contain todo-list-container"></div>
+    </div>
+    <script src="scripts/todo-list.js"></script>
+  </body>
+</html>
